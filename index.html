@@ -15,45 +15,78 @@
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             color: #222;
             line-height: 1.6;
-            font-size: 15px;
+            font-size: 14px;
             background: #fff;
         }
 
-        .container {
-            max-width: 640px;
+        .page {
+            max-width: 880px;
             margin: 0 auto;
-            padding: 36px 20px 80px;
+            display: flex;
+            padding: 44px 24px 50vh;
+            gap: 48px;
         }
 
-        h1 {
+        aside {
+            position: sticky;
+            top: 44px;
+            align-self: flex-start;
+            width: 210px;
+            flex-shrink: 0;
+        }
+
+        aside h1 {
             font-size: 28px;
             margin-bottom: 2px;
             font-weight: 600;
+            line-height: 1.3;
         }
 
-        .subtitle {
+        aside .subtitle {
             color: #555;
-            margin-top: 0;
             margin-bottom: 12px;
             font-size: 16px;
         }
 
-        .contact {
+        aside .contact {
             font-size: 14px;
-            margin-bottom: 0;
+            margin-bottom: 24px;
         }
 
-        .contact a {
+        aside .contact a {
             color: #1a6fb5;
             text-decoration: none;
         }
 
-        .contact a:hover {
+        aside .contact a:hover {
             text-decoration: underline;
         }
 
+        aside nav a {
+            display: block;
+            font-size: 12px;
+            color: #ccc;
+            text-decoration: none;
+            padding: 3px 0;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+
+        aside nav a:hover {
+            color: #555;
+        }
+
+        aside nav a.active {
+            color: #222;
+        }
+
+        main {
+            flex: 1;
+            min-width: 0;
+        }
+
         h2 {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -63,12 +96,12 @@
             margin-bottom: 16px;
         }
 
-        h2:first-of-type {
-            margin-top: 28px;
+        h2:first-child {
+            margin-top: 0;
         }
 
         p {
-            margin: 0 0 14px;
+            margin: 0 0 12px;
         }
 
         a {
@@ -81,7 +114,7 @@
         }
 
         .pub {
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
         .pub .title {
@@ -99,7 +132,7 @@
         }
 
         .role {
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         .role .org {
@@ -112,17 +145,17 @@
 
         .role .dates {
             color: #888;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .role .subrole {
             color: #666;
-            font-size: 14px;
+            font-size: 13px;
             margin-top: 2px;
         }
 
         .edu {
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
         .edu .school {
@@ -131,28 +164,60 @@
 
         .edu .dates {
             color: #888;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .edu .detail {
             color: #555;
-            font-size: 14px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+            .page {
+                flex-direction: column;
+                gap: 24px;
+                padding: 28px 20px 60px;
+            }
+
+            aside {
+                position: static;
+                width: auto;
+            }
+
+            aside nav {
+                display: flex;
+                gap: 12px;
+            }
+
+            h2:first-child {
+                margin-top: 0;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
+<div class="page">
 
-<h1>Jacob E. Reiter</h1>
-<p class="subtitle">AI, psychiatry, and biomarkers.</p>
-<p class="contact">
-    <a href="mailto:jacob.e.reiter@gmail.com">email</a> &middot;
-    <a href="https://www.linkedin.com/in/jacob-reiter/">linkedin</a> &middot;
-    <a href="https://scholar.google.com/scholar?q=author:%22Jacob+Reiter%22+psychiatry">google scholar</a>
-</p>
+<aside>
+    <h1>Jacob E. Reiter</h1>
+    <p class="subtitle">AI, psychiatry, and biomarkers.</p>
+    <p class="contact">
+        <a href="mailto:jacob.e.reiter@gmail.com">email</a> &middot;
+        <a href="https://www.linkedin.com/in/jacob-reiter/">linkedin</a> &middot;
+        <a href="https://scholar.google.com/scholar?q=author:%22Jacob+Reiter%22+psychiatry">google scholar</a>
+    </p>
+    <nav id="sidebar">
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+    </nav>
+</aside>
 
-<h2>About</h2>
+<main>
+
+<h2 id="about">About</h2>
 <p>
     I'm a product and research leader working at the intersection of artificial intelligence, neuroscience, and psychiatry.
     I'm interested in how AI and digital biomarkers can transform how we understand and treat mental illness.
@@ -179,7 +244,7 @@
     and a B.S. in Symbolic Systems (AI) from Stanford University.
 </p>
 
-<h2>Selected Publications</h2>
+<h2 id="publications">Selected Publications</h2>
 
 <div class="pub">
     <span class="title">Increasing psychopharmacology clinical trial success rates with digital measures and biomarkers.</span><br>
@@ -217,7 +282,7 @@
     <span class="venue">32nd Conference on Neural Information Processing Systems (NeurIPS)</span>. 2020.
 </div>
 
-<h2>Experience</h2>
+<h2 id="experience">Experience</h2>
 
 <div class="role">
     <span class="org">Tempus AI</span> &mdash; <span class="position">Group Product Lead, AI Biomarker Platform & Neurology/Psychiatry</span><br>
@@ -250,7 +315,7 @@
     <span class="dates">2020 &ndash; 2022</span>
 </div>
 
-<h2>Education</h2>
+<h2 id="education">Education</h2>
 
 <div class="edu">
     <span class="school">University of Cambridge</span><br>
@@ -271,7 +336,71 @@
     <span class="dates">2020</span>
 </div>
 
+</main>
+
 </div>
+
+<script>
+(function() {
+    var links = document.querySelectorAll('#sidebar a');
+    var sections = [];
+    links.forEach(function(link) {
+        var id = link.getAttribute('href').slice(1);
+        var el = document.getElementById(id);
+        if (el) sections.push({ id: id, el: el, link: link });
+    });
+
+    function getTop(el) {
+        var top = 0;
+        while (el) {
+            top += el.offsetTop;
+            el = el.offsetParent;
+        }
+        return top;
+    }
+
+    function update() {
+        var scrollY = window.scrollY + 100;
+        var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        var atBottom = window.scrollY >= maxScroll - 10;
+
+        var current;
+        if (atBottom) {
+            current = sections[sections.length - 1];
+        } else {
+            current = sections[0];
+            for (var i = 0; i < sections.length; i++) {
+                if (getTop(sections[i].el) <= scrollY) {
+                    current = sections[i];
+                }
+            }
+        }
+
+        var currentIdx = sections.indexOf(current);
+        links.forEach(function(link) {
+            var id = link.getAttribute('href').slice(1);
+            var idx = sectionIndex(id);
+            var dist = Math.abs(currentIdx - idx);
+            if (dist === 0) {
+                link.style.color = '#222';
+            } else {
+                var lightness = Math.min(85, 55 + dist * 15);
+                link.style.color = 'hsl(0, 0%, ' + lightness + '%)';
+            }
+        });
+    }
+
+    function sectionIndex(id) {
+        for (var i = 0; i < sections.length; i++) {
+            if (sections[i].id === id) return i;
+        }
+        return 0;
+    }
+
+    window.addEventListener('scroll', update);
+    update();
+})();
+</script>
 
 </body>
 </html>
