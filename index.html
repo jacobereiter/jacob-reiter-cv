@@ -131,6 +131,18 @@
             color: #888;
         }
 
+        .entry-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+        }
+
+        .entry-head .dates {
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+
         .role {
             margin-bottom: 16px;
         }
@@ -167,7 +179,7 @@
             font-size: 13px;
         }
 
-        .edu .detail {
+        .detail {
             color: #555;
             font-size: 13px;
         }
@@ -220,79 +232,100 @@
 
 <h2 id="about">About</h2>
 <p>
-    I'm a hybrid product manager and research scientist working at the intersection of artificial intelligence, psychiatry, and safety.
-    Over 5+ years I've shipped ML/LLM systems &mdash; product strategy, evals and risk metrics, and 0-to-1 launches across regulated AI products &mdash; and I care about how we make powerful AI both transformative for mental health and safe for the people who rely on it.
+    I'm a hybrid product manager and research scientist (and doing a PhD part-time at University of Cambridge [for the fun of it!]) working at the intersection of artificial intelligence, psychiatry, and safety.
 </p>
 <p>
-    I'm a Group Product Manager at <a href="https://www.tempus.com/">Tempus AI</a>, where I lead the
-    AI Biomarker Platform, Neurology &amp; Psychiatry, and provider genAI product teams. I also serve on the
-    US Gov. Foundation for the National Institutes of Health (FNIH)'s steering committee for <a href="https://fnih.org/our-programs/map-d-depression/">MAP-D</a>,
-    a public-private partnership developing biomarkers for depressive disorders.
+    As a PM, my focus has been on shipping ML/LLM systems in the mental health space. At <a href="https://www.tempus.com/">Tempus AI</a>, I lead our AI biomarker, psychiatry, and provider genAI product teams.
+    Previously, I was Product Lead for Psychiatry AI/ML at <a href="https://verily.com/">Verily (Google Life Sciences)</a>, owning the behavioral-health portfolio across four cross-functional teams &mdash; including AI/ML digital biomarkers across linguistics, paralinguistics, and mobile sensors and our work building novel EHR suicidality and self-harm risk detection models.
 </p>
 <p>
-    At the same time, I'm a part-time PhD candidate in Psychiatry at the University of Cambridge,
-    focused on applied AI and computational psychiatry. My research focuses on LLM safety and safeguards for psychiatric use &mdash; susceptibility/risk biomarkers for LLM-induced, low-base-rate adverse events, and empirical model-behavior evaluations (including sEEG measurement of sycophancy) that distill the drivers of safety risk in LLM use.
+    At the same time, I'm a part-time PhD candidate in Psychiatry at the University of Cambridge, focused on applied AI and computational psychiatry.
+    My research focuses on LLM safety and safeguards for psychiatric use &mdash; susceptibility/risk biomarkers for LLM-induced, low-base-rate adverse events, and empirical model-behavior evaluations (including sEEG measurement of sycophancy) that distill the drivers of safety risk in LLM use.
+    Before that I was a graduate researcher at Stanford focusing on interpretable (XAI and FAccT) deep-learning models for PTSD and schizophrenia risk detection.
 </p>
 <p>
-    Previously, I was Product Lead for Psychiatry AI/ML at <a href="https://verily.com/">Verily (Google Life Sciences)</a>, owning the behavioral-health portfolio across four cross-functional teams &mdash; AI/ML digital biomarkers across linguistics, paralinguistics, and mobile sensors; real-world evidence registries in depression; and the EHR suicidality-risk detection team. Earlier, as a graduate researcher at Stanford, I built interpretable (explainable-AI) deep-learning models for PTSD and schizophrenia risk detection.
-</p>
-<p>
-    I hold an M.S. in Computer Science (Biocomputation)
-    and a B.S. in Symbolic Systems (AI) from Stanford University.
+    I hold an M.S. in Computer Science (Biocomputation) and a B.S. in Symbolic Systems (AI) from Stanford University.
 </p>
 
 <h2 id="education">Education</h2>
 
 <div class="edu">
-    <span class="school">University of Cambridge</span><br>
-    Ph.D., Psychiatry (Applied AI, Computational Psychiatry) &mdash; Part-Time<br>
-    <span class="dates">2024 &ndash;</span>
+    <div class="entry-head">
+        <span class="school">University of Cambridge</span>
+        <span class="dates">2024 &ndash;</span>
+    </div>
+    Ph.D., Psychiatry (Applied AI, Computational Psychiatry)<br>
+    <span class="detail">[Executive / part-time]</span>
 </div>
 
 <div class="edu">
-    <span class="school">Stanford University</span><br>
-    M.S., Computer Science (Biocomputation), 4.17<br>
-    <span class="dates">2021</span>
+    <div class="entry-head">
+        <span class="school">Stanford University</span>
+        <span class="dates">2021</span>
+    </div>
+    M.S., Computer Science (Biocomputation), 4.17
 </div>
 
 <div class="edu">
-    <span class="school">Stanford University</span><br>
-    B.S., Symbolic Systems (Artificial Intelligence), with Distinction, 4.02<br>
-    <span class="detail">Phi Beta Kappa</span><br>
-    <span class="dates">2020</span>
+    <div class="entry-head">
+        <span class="school">Stanford University</span>
+        <span class="dates">2020</span>
+    </div>
+    B.S., Symbolic Systems (Artificial Intelligence), with Distinction, 4.02
 </div>
 
 <h2 id="experience">Experience</h2>
 
 <div class="role">
-    <span class="org">Tempus AI</span> &mdash; <span class="position">Group Product Manager, AI Biomarker Platform & Neurology/Psychiatry</span><br>
-    <span class="dates">2025 &ndash; Present</span>
-</div>
-
-
-
-<div class="role">
-    <span class="org">Stealth Spin-Out [Psychedelics &times; AI]</span> &mdash; <span class="position">VP, Product & Translational Research</span><br>
-    <span class="dates">2024 &ndash; 2025</span>
+    <div class="entry-head">
+        <span class="org">Tempus AI</span>
+        <span class="dates">2025 &ndash; Present</span>
+    </div>
+    <div class="position">Group Product Manager</div>
 </div>
 
 <div class="role">
-    <span class="org">Verily (Google Life Sciences)</span> &mdash; <span class="position">Product Manager Lead, Psychiatry AI/ML</span><br>
-    <span class="dates">2021 &ndash; 2024</span>
+    <div class="entry-head">
+        <span class="org">University of Cambridge</span>
+        <span class="dates">2024 &ndash; Present</span>
+    </div>
+    <div class="position">Doctoral Researcher <span class="detail">[Executive / part-time]</span></div>
+</div>
+
+<div class="role">
+    <div class="entry-head">
+        <span class="org">Stealth Spin-Out [Psychedelics &times; AI]</span>
+        <span class="dates">2024 &ndash; 2025</span>
+    </div>
+    <div class="position">VP, Product &amp; Translational Research</div>
+</div>
+
+<div class="role">
+    <div class="entry-head">
+        <span class="org">Verily / Google Life Sciences</span>
+        <span class="dates">2021 &ndash; 2024</span>
+    </div>
+    <div class="position">Product Manager Lead, Psychiatry AI/ML</div>
     <div class="subrole">Previously Product Manager, Digital Biomarkers (2022 &ndash; 2023)</div>
     <div class="subrole">Previously Associate Product Manager (2021 &ndash; 2022)</div>
 </div>
 
 <div class="role">
-    <span class="org">Stanford Medicine, Dept. of Psychiatry</span> &mdash; <span class="position">Graduate Researcher</span><br>
-    <span class="dates">2020 &ndash; 2022</span>
+    <div class="entry-head">
+        <span class="org">Stanford Medicine, Dept. of Psychiatry</span>
+        <span class="dates">2020 &ndash; 2022</span>
+    </div>
+    <div class="position">Graduate Researcher</div>
 </div>
 
 <h2 id="advisory">Advisory &amp; Steering Committees</h2>
 
 <div class="role">
-    <span class="org">US Gov. Foundation for the National Institutes of Health (FNIH)</span> &mdash; <span class="position">Steering Committee Member, <a href="https://fnih.org/our-programs/map-d-depression/">MAP-D</a> Depression Biomarker Public-Private Partnership</span><br>
-    <span class="dates">2024 &ndash; Present</span>
+    <div class="entry-head">
+        <span class="org">US Gov. Foundation for the National Institutes of Health (FNIH)</span>
+        <span class="dates">2024 &ndash; Present</span>
+    </div>
+    <div class="position">Steering Committee Member, <a href="https://fnih.org/our-programs/map-d-depression/">MAP-D</a> Depression Biomarker Public-Private Partnership</div>
 </div>
 
 <h2 id="publications">Publications</h2>
@@ -301,12 +334,6 @@
     <span class="title">Increasing psychopharmacology clinical trial success rates with digital measures and biomarkers.</span><br>
     <strong>Reiter JE</strong>, Nickels S, Nelson B, Rainaldi E, Peng L, Kapur R, Abernethy A, Trister A.<br>
     <span class="venue">Nature Neuropsychopharmacology: Digital Psychiatry and Neuroscience</span>, 2(7). 2024.
-</div>
-
-<div class="pub">
-    <span class="title">Large language models do not outperform BERT embeddings and untrained human raters in classifying depression severity from voice diaries.</span><br>
-    Shor J, Tomanek K, Bennett M, <strong>Reiter JE</strong>.<br>
-    <span class="note">In review.</span>
 </div>
 
 <div class="pub">
